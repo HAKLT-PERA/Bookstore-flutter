@@ -4,6 +4,8 @@ import 'package:treva_shop_flutter/UI/CartUIComponent/CartLayout.dart';
 import 'package:treva_shop_flutter/UI/HomeUIComponent/Home.dart';
 import 'package:treva_shop_flutter/UI/AcountUIComponent/Profile.dart';
 
+import 'TimelineUICOmponent/timeline_one_page.dart';
+
 class bottomNavigationBar extends StatefulWidget {
  @override
  _bottomNavigationBarState createState() => _bottomNavigationBarState();
@@ -22,6 +24,8 @@ class _bottomNavigationBarState extends State<bottomNavigationBar> {
     return new cart();
    case 3:
     return new profil();
+    case 4:
+      return new TimelineOnePage();
     break;
    default:
     return Menu();
@@ -77,6 +81,12 @@ class _bottomNavigationBarState extends State<bottomNavigationBar> {
               "Acount",
               style: TextStyle(fontFamily: "Berlin", letterSpacing: 0.5),
              )),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.queue),
+              title: Text(
+                "Feed",
+                style: TextStyle(fontFamily: "Berlin", letterSpacing: 0.5),
+              )),
         ],
        )),
   );
